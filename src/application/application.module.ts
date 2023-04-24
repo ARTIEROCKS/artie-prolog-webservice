@@ -5,6 +5,7 @@ import ProductRepositoryMongo from '../infrastructure/adapters/respository/produ
 import ProductSchema from '../infrastructure/adapters/respository/products/schema/product.schema';
 import ProductFactory from './factory/product.factory';
 import { PRODUCTS_USECASES } from './usecases/products';
+import { PEDAGOGICAL_PROGRAMS_USECASES } from './usecases/pedagogicalPrograms';
 
 @Module({
   imports: [
