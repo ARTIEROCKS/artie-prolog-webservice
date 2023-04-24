@@ -14,6 +14,6 @@ export class PedagogicalProgramService implements IPedagogicalProgramService {
   ) {}
 
   findByInstitutionId(institutionId: string): PedagogicalProgram[] {
-    return null;
+    return this.pedagogicalProgramRepository.findByInstitutionId(institutionId);
   }
 }
