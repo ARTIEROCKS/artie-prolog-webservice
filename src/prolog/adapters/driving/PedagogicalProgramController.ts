@@ -1,8 +1,6 @@
 import { Controller, Get, Query, Logger } from '@nestjs/common';
 import { PedagogicalProgramService } from '../../domain/inboundPorts/PedagogicalProgramService';
 
-import { PedagogicalProgramCommand } from '../model/PedagogicalProgramCommand';
-
 @Controller('program')
 export class PedagogicalProgramController {
   private readonly logger = new Logger(PedagogicalProgramController.name);
