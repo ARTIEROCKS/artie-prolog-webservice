@@ -1,9 +1,7 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ApplicationModule } from '../application/application.module';
-import ProductSchema from './adapters/repository/products/schema/product.schema';
 import PedagogicalProgramSchema from './adapters/repository/pedagogicalPrograms/schema/pedagogicalProgram.schema';
-import ProductController from './controllers/product.controller';
 import PedagogicalProgramController from './controllers/pedagogicalProgram.controller';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { Configuration } from '../config/env.enum';
@@ -19,10 +17,9 @@ import { Configuration } from '../config/env.enum';
       }),
     }),
     MongooseModule.forFeature([
-      { name: 'Product', schema: ProductSchema },
       { name: 'PedagogicalProgram', schema: PedagogicalProgramSchema },
     ]),
   ],
-  controllers: [ProductController, PedagogicalProgramController],
+  controllers: [PedagogicalProgramController],
 })
 export class InfrastructureModule {}
