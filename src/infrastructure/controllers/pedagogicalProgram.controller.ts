@@ -1,4 +1,4 @@
-import { Controller, Get, Res, HttpStatus, Param } from '@nestjs/common';
+import { Controller, Get, Res, HttpStatus, Query } from '@nestjs/common';
 import GetPedagogicalProgramByInstitutionIdUseCase from '../../application/usecases/pedagogicalPrograms/getPedagogicalProgramByInstitutionId.usecase';
 
 @Controller('pedagogicalprogram')
@@ -7,10 +7,10 @@ export default class ProductController {
     private readonly getPedagogicalProgramByInstitutionIdUseCase: GetPedagogicalProgramByInstitutionIdUseCase,
   ) {}
 
-  @Get(':institutionId')
+  @Get()
   public async getPedagogicalProgram(
     @Res() request,
-    @Param('institutionId') institutionId: string,
+    @Query('institutionId') institutionId: string,
   ): Promise<any> {
     const pedagogicalProgram =
       await this.getPedagogicalProgramByInstitutionIdUseCase.handler(
