@@ -1,7 +1,7 @@
 import { Controller, Get, Res, HttpStatus, Param } from '@nestjs/common';
 import GetPedagogicalProgramByInstitutionIdUseCase from '../../application/usecases/pedagogicalPrograms/getPedagogicalProgramByInstitutionId.usecase';
 
-@Controller('products')
+@Controller('pedagogicalprogram')
 export default class ProductController {
   constructor(
     private readonly getPedagogicalProgramByInstitutionIdUseCase: GetPedagogicalProgramByInstitutionIdUseCase,

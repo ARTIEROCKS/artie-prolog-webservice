@@ -20,7 +20,7 @@ import { Configuration } from '../config/env.enum';
     }),
     MongooseModule.forFeature([
       { name: 'Product', schema: ProductSchema },
-      { name: 'PedagogicalProgran', schema: PedagogicalProgramSchema },
+      { name: 'PedagogicalProgram', schema: PedagogicalProgramSchema },
     ]),
   ],
   controllers: [ProductController, PedagogicalProgramController],
