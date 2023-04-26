@@ -1,6 +1,6 @@
 import { Optional } from 'typescript-optional';
 import PedagogicalProgram from '../../domain/models/pedagogicalProgram.model';
-import { PedagogicalProgramEntity } from '../adapters/respository/pedagogicalPrograms/entity/pedagogicalProgram.entity';
+import { PedagogicalProgramEntity } from '../adapters/repository/pedagogicalPrograms/entity/pedagogicalProgram.entity';
 
 export default class PedagogicalProgramMapper {
   public static toDomain(

@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { DomainModule } from 'src/domain/domain.module';
-import ProductRepositoryMongo from '../infrastructure/adapters/respository/products/product.repository.mongo';
-import PedagogicalProgramRepositoryMongo from 'src/infrastructure/adapters/respository/pedagogicalPrograms/pedagogicalProgram.repository.mongo';
-import ProductSchema from '../infrastructure/adapters/respository/products/schema/product.schema';
-import PedagogicalProgramSchema from 'src/infrastructure/adapters/respository/pedagogicalPrograms/schema/pedagogicalProgram.schema';
+import ProductRepositoryMongo from '../infrastructure/adapters/repository/products/product.repository.mongo';
+import PedagogicalProgramRepositoryMongo from 'src/infrastructure/adapters/repository/pedagogicalPrograms/pedagogicalProgram.repository.mongo';
+import ProductSchema from '../infrastructure/adapters/repository/products/schema/product.schema';
+import PedagogicalProgramSchema from 'src/infrastructure/adapters/repository/pedagogicalPrograms/schema/pedagogicalProgram.schema';
 import ProductFactory from './factory/product.factory';
 import PedagogicalProgramFactory from './factory/pedagogicalProgram.factory';
 import { PRODUCTS_USECASES } from './usecases/products';

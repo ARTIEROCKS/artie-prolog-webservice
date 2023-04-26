@@ -2,7 +2,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Injectable } from '@nestjs/common';
 import { Model } from 'mongoose';
 import PedagogicalProgram from '../../../../domain/models/pedagogicalProgram.model';
-import { PedagogicalProgramEntity } from '../../../adapters/respository/pedagogicalPrograms/entity/pedagogicalProgram.entity';
+import { PedagogicalProgramEntity } from './entity/pedagogicalProgram.entity';
 import { Optional } from 'typescript-optional';
 import PedagogicalProgramMapper from '../../../mapper/pedagogicalProgram.mapper';
 import { PedagogicalProgramRepository } from '../../../../domain/ports/pedagogicalProgram.repository';

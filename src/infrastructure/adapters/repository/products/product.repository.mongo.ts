@@ -2,7 +2,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Injectable } from '@nestjs/common';
 import { Model } from 'mongoose';
 import Product from '../../../../domain/models/products.model';
-import { ProductEntity } from '../../../adapters/respository/products/entity/product.entity';
+import { ProductEntity } from './entity/product.entity';
 import { Optional } from 'typescript-optional';
 import ProductMapper from '../../../mapper/product.mapper';
 import { ProductRepository } from '../../../../domain/ports/product.repository';

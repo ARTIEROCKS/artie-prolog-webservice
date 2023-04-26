@@ -1,6 +1,6 @@
 import { Optional } from 'typescript-optional';
 import Product from '../../domain/models/products.model';
-import { ProductEntity } from '../adapters/respository/products/entity/product.entity';
+import { ProductEntity } from '../adapters/repository/products/entity/product.entity';
 
 export default class ProductMapper {
   public static toDomain(productEntity: ProductEntity): Optional<Product> {
