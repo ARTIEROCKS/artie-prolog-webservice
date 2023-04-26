@@ -33,6 +33,7 @@
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^7.2.0",
+    "tau-prolog": "^0.3.4",
     "typescript-optional": "^3.0.0-alpha.3"
   },
   "devDependencies": {
