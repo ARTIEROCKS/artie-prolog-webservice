@@ -19,7 +19,7 @@ export default class PedagogicalProgramRepositoryMongo
   public async getPedagogicalProgramByInstitutionId(
     institutionId: string,
   ): Promise<Optional<PedagogicalProgram>> {
-    const pedagogicalProgram = await this.pedagogicalProgramModel.find({
+    const pedagogicalProgram = await this.pedagogicalProgramModel.findOne({
       institutionId: institutionId,
     });
     return PedagogicalProgramMapper.toDomain(pedagogicalProgram);
