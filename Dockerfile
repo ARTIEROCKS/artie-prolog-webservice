@@ -15,7 +15,8 @@ RUN npm prune --production
 # Second Stage : Setup command to run your app
 FROM node:14-alpine3.17
 
-ENV NODE_ENV production
+ARG ENV
+ENV NODE_ENV $ENV
 USER node
 WORKDIR /app
 
