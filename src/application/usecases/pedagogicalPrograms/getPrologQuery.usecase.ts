@@ -31,11 +31,32 @@ export default class GetPrologQueryUseCase {
 
     //We get different answers from the program
     for await (const answer of session.promiseAnswers()) {
-      results.push(answer);
+      const dto = this.transformAnswerToDTOArray(answer);
+      results.push(dto);
     }
 
     //We create the optional results and return them in a promise
     const optionalResults: Optional<string[]> = Optional.ofNullable(results);
     return optionalResults;
+  }
+
+  /**
+   * Function to transform the prolog answer into a dto
+   * @param answer Answer received from the prolog query
+   * @returns a dto array with the different variables and values
+   */
+  private transformAnswerToDTOArray(answer: any): any {
+    const dtoArray = [];
+
+    for (const key in answer.links) {
+      if (answer.links.hasOwnProperty(key)) {
+        dtoArray.push({
+          variable: key,
+          value: answer.links[key].id,
+        });
+      }
+    }
+
+    return dtoArray;
   }
 }
