@@ -15,14 +15,16 @@ RUN npm prune --production
 # Second Stage : Setup command to run your app
 FROM node:14-alpine3.17
 
-ENV NODE_ENV production
+ARG ENV
+ENV NODE_ENV $ENV
 USER node
 WORKDIR /app
 
 COPY --from=builder /app/package*.json /app/
 COPY --from=builder /app/node_modules/ /app/node_modules/
 COPY --from=builder /app/dist/ /app/dist/
+COPY --from=builder /app/environments/ /app/environments/
 
-EXPOSE 5000
+EXPOSE 3000
 
-ENTRYPOINT [ "npm run start:prod -p $PORT" ]
+CMD ["npm", "run", "start:prod"]

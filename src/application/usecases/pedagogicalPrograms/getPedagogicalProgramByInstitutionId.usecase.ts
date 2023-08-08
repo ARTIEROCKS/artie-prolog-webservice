@@ -4,7 +4,7 @@ import { PedagogicalProgramRepository } from '../../../domain/ports/pedagogicalP
 import { Optional } from 'typescript-optional';
 
 @Injectable()
-export default class GetProductUseCase {
+export default class GetPedagogicalProgramByInstitutionIdUseCase {
   constructor(
     @Inject('PedagogicalProgramRepository')
     private pedagogicalProgramRepository: PedagogicalProgramRepository,
